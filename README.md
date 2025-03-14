@@ -2,7 +2,7 @@
 ## Villhauer, S., Zhao, K., Washam, P., & Pettit, E. (2024).  
 ## University of California, Los Angeles. 
 
-This repository contains research and analysis on ocean-driven melting near and within ice shelf basal channels and crevasses. It includes MATLAB scripts, datasets, and reports focused on modeling ocean circulation within basal geometries and examining their impact on ice shelf stability.
+This repository contains research and analysis on ocean-driven melting near and within ice shelf basal channels and crevasses. It includes MATLAB scripts, simulation output, and reports focused on modeling ocean circulation within basal geometries and examining their impact on ice shelf stability.
 
 ---
 
