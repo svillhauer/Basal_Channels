@@ -11,7 +11,7 @@ This repository contains research and analysis on ocean-driven melting near and 
 ```
 Basal_Channels
 ├── Code               # MATLAB scripts and analysis tools
-├── High Res Output               # Processed datasets and outputs
+├── High Res Output    # 2D Y-averaged simulation outputs
 ├── Presentations      # Research posters and slides
 ├── README.md          # Repository overview and documentation
 ```
