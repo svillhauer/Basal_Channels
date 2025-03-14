@@ -19,7 +19,7 @@ Basal_Channels
 ---
 
 ## Research Overview
-### Investigating Ocean-Driven Melting in Ice Shelf Basal Channels
+### Goal: Investigating Ocean-Driven Melting in Ice Shelf Basal Channels
 Basal channels and crevasses play a critical role in ice shelf evolution by influencing melt rates, circulation patterns, and structural stability. This repository focuses on:
 - Large Eddy Simulations (LES) of circulation within ice shelf cavities
 - The impact of oceanic boundary conditions on near-boundary melting
