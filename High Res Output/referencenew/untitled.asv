@@ -1,0 +1,73 @@
+%% Plot xz-averaged density profiles 
+
+
+parent_directory = '/Users/sarahvillhauer/Desktop/High Res Data/';
+
+cd([parent_directory 'referencenew']);
+
+
+    %% Load in model output
+    % uvel
+    ncid = netcdf.open('timeavgedfields_uavg.nc','NOWRITE');
+    varid = netcdf.inqVarID(ncid,'u');
+    uvel = netcdf.getVar(ncid,varid,'double');
+    netcdf.close(ncid);
+    % vvel
+    ncid = netcdf.open('timeavgedfields_vavg.nc','NOWRITE');
+    varid = netcdf.inqVarID(ncid,'v');
+    vvel = netcdf.getVar(ncid,varid,'double');
+    netcdf.close(ncid);
+    % wvel
+    ncid = netcdf.open('timeavgedfields_wavg.nc','NOWRITE');
+    varid = netcdf.inqVarID(ncid,'w');
+    wvel = netcdf.getVar(ncid,varid,'double');
+    % zz (flux cell)
+    varid = netcdf.inqVarID(ncid,'zF');
+    zz_f = netcdf.getVar(ncid,varid,'double');
+    netcdf.close(ncid);
+    wvel = -wvel;
+    % salt
+    ncid = netcdf.open('timeavgedfields_savg.nc','NOWRITE');
+    varid = netcdf.inqVarID(ncid,'S');
+    salt = netcdf.getVar(ncid,varid,'double');
+    netcdf.close(ncid);
+    % temp
+    ncid = netcdf.open('timeavgedfields_tavg.nc','NOWRITE');
+    varid = netcdf.inqVarID(ncid,'T');
+    temp = netcdf.getVar(ncid,varid,'double');
+    % xx (center cell)
+    varid = netcdf.inqVarID(ncid,'xC');
+    xx = netcdf.getVar(ncid,varid,'double');
+    % zz (center cell)
+    varid = netcdf.inqVarID(ncid,'zC');
+    zz = netcdf.getVar(ncid,varid,'double');
+    netcdf.close(ncid);
+
+
+    % Flip the fields from left to right
+    uvel = flipud(uvel);
+    vvel = flipud(vvel);
+    wvel = flipud(wvel);
+    temp = flipud(temp);
+    salt = flipud(salt);
+    Nx = 400; 
+    Nr = 210; 
+
+    % Define 2D pressure field
+    pressure = zz'*ones(size(salt,1),size(salt,2)); 
+
+
+
+% Absolute salinity from practical salinity 
+longitude = -60.5; 
+latitude = 80.65; 
+abs_salt = gsw_SA_from_SP(salt, pressure, longitude, latitude); % Petermann Gletscher (averaged location) longitude, latitude = -60.5, 80.65
+% North 80.7 N 80.6 S, -60 E -61 W 
+
+
+% Conservative temperature from in situ temperature 
+CT = gsw_CT_from_t(abs_salt,temp,pressure); 
+
+
+% In-situ density from conservative temperature and absolute salinity 
+rho = gsw_rho(abs_salt, CT, pressure);
