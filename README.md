@@ -32,7 +32,6 @@ Basal channels and crevasses play a critical role in ice shelf evolution by infl
 - Variability in ocean conditions drives differing patterns of melt within and outside basal geometries.  
 
 For more details, check out:
-For more details, check out:
 - [Western Antarctic Ice Sheet (WAIS) Workshop Poster](https://github.com/svillhauer/Basal_Channels/blob/fdd51246030ce059ad8164f2e4218cc25af5b002/Presentations/WAIS_final.pdf)
 
 ---
