@@ -1,5 +1,5 @@
 # Ocean-Driven Melting near and within Ice Shelf Basal Channels and Crevasses
-## Villhauer, S., Zhao, K., Washam, P., & Pettit, E. (2024).  
+## Villhauer, S., Zhao, K., Washam, P., & Pettit, E. (2025).  
 ## University of California, Los Angeles. 
 
 This repository contains research and analysis on ocean-driven melting near and within ice shelf basal channels and crevasses. It includes MATLAB scripts, simulation output, and reports focused on modeling ocean circulation within basal geometries and examining their impact on ice shelf stability.
