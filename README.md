@@ -39,7 +39,7 @@ For more details, check out:
 
 ## Data Access
 
-This project utilizes Large Eddy Simulations developed with MITgcm, incorporating 3D Smagorinsky viscosity and ice-ocean boundary layer parameterization. 2D Y-average fields for the reference case are available in the `/High Res Output/` folder.
+This project utilizes Large Eddy Simulations developed with MITgcm, incorporating 3D Smagorinsky viscosity and ice-ocean boundary layer parameterization. 2D Y-averaged fields for the reference case are available in the `/High Res Output/` folder.
 
 ---
 
